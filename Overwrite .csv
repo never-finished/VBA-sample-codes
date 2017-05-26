@@ -1,0 +1,11 @@
+Sub overwriteFile()
+'
+' overwriteFile Macro
+'
+'I use this for csv files which are updated multiple times a day if I"m not going to need the old file
+'This also turns off the .csv warning and the do you want to save warning
+
+    Application.DisplayAlerts = False
+    ActiveWorkbook.SaveAs ("C:\filepath\commonlyUsedFile.csv")
+    Application.DisplayAlerts = True
+End Sub
