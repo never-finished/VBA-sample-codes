@@ -1,0 +1,15 @@
+Sub notBlank()
+'
+' notBlank Macro
+'
+
+'This will filter data to give all rows where column C doesn't contain  a blank, column C is feild 3 in the case below
+    
+    Dim lastRow As Long
+    
+    lastRow = Cells(Rows.Count, 1).End(xlUp).Row
+    Range("A1:C1").Select
+    Selection.AutoFilter
+    ActiveSheet.Range("$A$1:$C" & lastRow).AutoFilter Field:=3, Criteria1:="<>"
+
+End Sub
